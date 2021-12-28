@@ -88,6 +88,7 @@ public class EnvironmentSpawner : MonoBehaviour
         GameObject newTarget = Instantiate(gamePrefab);
         newTarget.transform.SetParent(gameObject.transform);
         newTarget.transform.localPosition = new Vector3(xRandom, 0, zRandom);
+        newTarget.transform.LookAt(Vector3.zero);
     }
 
     public void ClearEnvironment()

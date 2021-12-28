@@ -40,12 +40,12 @@ public class ShooterAgent : Agent
         var action = actions.DiscreteActions;
         if (action[0] == 1)
         {
-            AddReward(0.001f);
+            AddReward(0.00001f);
             TurnLeft();
         }
         else if (action[0] == 2)
         {
-            AddReward(0.001f);
+            AddReward(0.00001f);
             TurnRight();
         } 
         else if (action[0] == 3)
