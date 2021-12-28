@@ -110,9 +110,9 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
   score: {fileID: 0}
-  turnSpeed: 15
+  turnSpeed: 10
   bullet: {fileID: 7924110620425057513, guid: ba2cd1cc42c20364d90d3d4fdf2b9785, type: 3}
-  bulletSpeed: 250
+  bulletSpeed: 100
   fireRate: 0.5
 --- !u!114 &1002964804259726804
 MonoBehaviour:
