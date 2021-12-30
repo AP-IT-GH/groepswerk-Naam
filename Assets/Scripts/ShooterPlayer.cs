@@ -37,10 +37,7 @@ public class ShooterPlayer : MonoBehaviour
     void onPrimaryButtonEvent(bool pressed)
     {
         isPressed = pressed;
-        if (pressed)
-        {
-            Shoot();
-        }
+        Shoot();
     }
 
     void Update()
@@ -55,25 +52,25 @@ public class ShooterPlayer : MonoBehaviour
         {
             Debug.Log("Shoot");
         }
-        if (timer > fireRate)
-        {
-            GameObject newBullet = Instantiate(bullet, new Vector3(0, 1, 0) + transform.forward, transform.rotation);
-            newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.VelocityChange);
-            shoot = true;
-            timer = 0f;
-        }
-        if (shoot)
-        {
-            if (timer < fireRate)
-            {
-                timer += Time.deltaTime;
-            }
-            else
-            {
-                timer = fireRate;
+        //if (timer > fireRate)
+        //{
+        //    GameObject newBullet = Instantiate(bullet, new Vector3(0, 1, 0) + transform.forward, transform.rotation);
+        //    newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.VelocityChange);
+        //    shoot = true;
+        //    timer = 0f;
+        //}
+        //if (shoot)
+        //{
+        //    if (timer < fireRate)
+        //    {
+        //        timer += Time.deltaTime;
+        //    }
+        //    else
+        //    {
+        //        timer = fireRate;
 
-            }
-        }
+        //    }
+        //}
     }
     public void AddReward(float reward)
     {
