@@ -49,7 +49,12 @@ public class OnHit : MonoBehaviour
             player.AddReward(-2f);
             DestroyObject(collision, gameObject);
         }
+        else if(collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall")
+        {
+            Destroy(collision.gameObject);
+        }
     }
+
     private void DestroyObject(Collision collision, GameObject gameObject)
     {
         Destroy(gameObject);

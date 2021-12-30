@@ -24,11 +24,13 @@ public class ShooterPlayer : MonoBehaviour
     [SerializeField]
     private PrimaryButtonWatcher watcher;
     public bool isPressed = false;
+    private Coroutine shootRoutine;
 
     void Start()
     {
         environment = GetComponentInParent<EnvironmentSpawner>();
         environment.ClearEnvironment();
+        environment.StartEnvironment();
         transform.localPosition = new Vector3(0, 0, 0);
 
         watcher.primaryButtonDown.AddListener(onPrimaryButtonEvent);
@@ -37,40 +39,42 @@ public class ShooterPlayer : MonoBehaviour
     void onPrimaryButtonEvent(bool pressed)
     {
         isPressed = pressed;
-        Shoot();
+        //Shoot();
+        if (shootRoutine != null)
+        {
+            StopCoroutine(Shoot());
+        }
+        shootRoutine = StartCoroutine(Shoot());
     }
 
     void Update()
     {
-        scoreBoard.text = score.ToString("f4");
+        scoreBoard.text = "Score: " + score.ToString("f0");
     }
 
 
-    public void Shoot()
+    public IEnumerator Shoot()
     {
-        while (isPressed) 
+        if (timer > fireRate)
         {
-            Debug.Log("Shoot");
+            GameObject newBullet = Instantiate(bullet, gameObject.transform.position + transform.forward, transform.rotation);
+            newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.VelocityChange);
+            shoot = true;
+            timer = 0f;
         }
-        //if (timer > fireRate)
-        //{
-        //    GameObject newBullet = Instantiate(bullet, new Vector3(0, 1, 0) + transform.forward, transform.rotation);
-        //    newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.VelocityChange);
-        //    shoot = true;
-        //    timer = 0f;
-        //}
-        //if (shoot)
-        //{
-        //    if (timer < fireRate)
-        //    {
-        //        timer += Time.deltaTime;
-        //    }
-        //    else
-        //    {
-        //        timer = fireRate;
+        if (shoot)
+        {
+            if (timer < fireRate)
+            {
+                timer += Time.deltaTime;
+            }
+            else
+            {
+                timer = fireRate;
 
-        //    }
-        //}
+            }
+        }
+        yield return null;
     }
     public void AddReward(float reward)
     {

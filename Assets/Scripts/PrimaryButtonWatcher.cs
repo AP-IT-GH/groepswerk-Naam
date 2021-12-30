@@ -85,7 +85,6 @@ public class PrimaryButtonWatcher : MonoBehaviour
 
     private void Update()
     {
-
         bool tempstate = false;
         foreach (var device in devicesPrimaryButton)
         {

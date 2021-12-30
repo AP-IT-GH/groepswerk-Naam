@@ -91,6 +91,12 @@ public class EnvironmentSpawner : MonoBehaviour
         newTarget.transform.LookAt(Vector3.zero);
     }
 
+    public void StartEnvironment()
+    {
+        StartCoroutine(Spawner());
+        StartCoroutine(AllySpawner());
+        StartCoroutine(PrioritySpawner());
+    }
     public void ClearEnvironment()
     {
         StopAllCoroutines();
@@ -106,10 +112,6 @@ public class EnvironmentSpawner : MonoBehaviour
         foreach (Transform priority in priority.transform)
         {
             GameObject.Destroy(priority.gameObject);
-        }
-
-        StartCoroutine(Spawner());
-        StartCoroutine(AllySpawner());
-        StartCoroutine(PrioritySpawner());
+        }   
     }
 }

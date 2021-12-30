@@ -32,6 +32,7 @@ public class ShooterAgent : Agent
     public override void OnEpisodeBegin()
     {
         environment.ClearEnvironment();
+        environment.StartEnvironment();
         transform.localPosition = new Vector3(0, 0, 0);
     }
 
