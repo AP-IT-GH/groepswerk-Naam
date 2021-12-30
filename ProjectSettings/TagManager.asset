@@ -12,6 +12,7 @@ TagManager:
   - Ally
   - Bullet
   - Agent
+  - BulletPlayer
   layers:
   - Default
   - TransparentFX
