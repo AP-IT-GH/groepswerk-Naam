@@ -13,6 +13,8 @@ TagManager:
   - Bullet
   - Agent
   - BulletPlayer
+  - Wall
+  - GameOver
   layers:
   - Default
   - TransparentFX

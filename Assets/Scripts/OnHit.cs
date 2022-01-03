@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OnHit : MonoBehaviour
 {
@@ -22,16 +23,19 @@ public class OnHit : MonoBehaviour
         if (collision.gameObject.tag == "Bullet" && gameObject.tag == "Target")
         {
             agent.AddReward(1f);
+            agent.agentScore += 1;
             DestroyObject(collision, gameObject);
         }
         else if (collision.gameObject.tag == "Bullet" && gameObject.tag == "Priority")
         {
             agent.AddReward(3f);
+            agent.agentScore += 3;
             DestroyObject(collision, gameObject);
         }
         else if (collision.gameObject.tag == "Bullet" && gameObject.tag == "Ally")
         {
             agent.AddReward(-2f);
+            agent.agentScore -= 2;
             DestroyObject(collision, gameObject);
         }
         else if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Target")
@@ -49,7 +53,17 @@ public class OnHit : MonoBehaviour
             player.AddReward(-2f);
             DestroyObject(collision, gameObject);
         }
+        else if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall")
+        {
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "GameOver")
+        {
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("backup");       
+        }
     }
+
     private void DestroyObject(Collision collision, GameObject gameObject)
     {
         Destroy(gameObject);
