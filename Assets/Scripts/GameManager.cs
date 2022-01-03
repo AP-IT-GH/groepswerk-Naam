@@ -9,10 +9,15 @@ public class GameManager : MonoBehaviour
     private TextMeshPro timer;
     public EnvironmentSpawner Environment;
     [SerializeField]
+    public EnvironmentSpawner AgentEnvironment;
+    [SerializeField]
     private TextMeshPro scoreBoard;
     [SerializeField]
     private TextMeshPro gameOverCanvas;
-    private int awaitTime;
+    [SerializeField]
+    private GameObject gameOverButton;
+    [SerializeField]
+    private int awaitTime = 60;
     public enum GameStates
     {
         Playing,
@@ -22,11 +27,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        awaitTime = 60;
         StartCoroutine(GameOver());
         scoreBoard.gameObject.SetActive(true);
         timer.gameObject.SetActive(true);
         gameOverCanvas.gameObject.SetActive(false);
+        gameOverButton.gameObject.SetActive(false);
     }
 
     private IEnumerator GameOver()
@@ -45,6 +50,8 @@ public class GameManager : MonoBehaviour
                 gameOverCanvas.gameObject.SetActive(true);
                 gameOverCanvas.text = "End " + scoreBoard.text;
                 Environment.ClearEnvironment();
+                AgentEnvironment.ClearEnvironment();
+                gameOverButton.gameObject.SetActive(true);
                 gameState = GameStates.GameOver;
                 break;
         }

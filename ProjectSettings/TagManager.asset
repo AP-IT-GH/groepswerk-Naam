@@ -14,6 +14,7 @@ TagManager:
   - Agent
   - BulletPlayer
   - Wall
+  - GameOver
   layers:
   - Default
   - TransparentFX

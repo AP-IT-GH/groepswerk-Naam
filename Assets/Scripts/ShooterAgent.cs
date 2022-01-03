@@ -17,6 +17,7 @@ public class ShooterAgent : Agent
     private float fireRate = 0.5f;
     private float timer = 5f;
     private bool shoot = false;
+    public int agentScore;
     private EnvironmentSpawner environment;
 
     void Start()
@@ -26,7 +27,7 @@ public class ShooterAgent : Agent
 
     void Update()
     {
-        score.text = GetCumulativeReward().ToString("f4");
+        score.text = agentScore.ToString();
     }
 
     public override void OnEpisodeBegin()
