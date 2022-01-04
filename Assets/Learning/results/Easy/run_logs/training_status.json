@@ -1,0 +1,173 @@
+{
+    "My Behavior": {
+        "checkpoints": [
+            {
+                "steps": 53316,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-53316.onnx",
+                "reward": null,
+                "creation_time": 1641214899.1121418,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-53316.pt"
+                ]
+            },
+            {
+                "steps": 62499,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-62499.onnx",
+                "reward": null,
+                "creation_time": 1641215013.685054,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-62499.pt"
+                ]
+            },
+            {
+                "steps": 64797,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-64797.onnx",
+                "reward": null,
+                "creation_time": 1641215064.3809361,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-64797.pt"
+                ]
+            },
+            {
+                "steps": 71229,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-71229.onnx",
+                "reward": null,
+                "creation_time": 1641215158.6494808,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-71229.pt"
+                ]
+            },
+            {
+                "steps": 78504,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-78504.onnx",
+                "reward": null,
+                "creation_time": 1641215252.7425733,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-78504.pt"
+                ]
+            },
+            {
+                "steps": 80622,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-80622.onnx",
+                "reward": null,
+                "creation_time": 1641215344.2557209,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-80622.pt"
+                ]
+            },
+            {
+                "steps": 93729,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-93729.onnx",
+                "reward": null,
+                "creation_time": 1641215495.442194,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-93729.pt"
+                ]
+            },
+            {
+                "steps": 107727,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-107727.onnx",
+                "reward": null,
+                "creation_time": 1641215655.37586,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-107727.pt"
+                ]
+            },
+            {
+                "steps": 133866,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-133866.onnx",
+                "reward": null,
+                "creation_time": 1641215955.488704,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-133866.pt"
+                ]
+            },
+            {
+                "steps": 139431,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-139431.onnx",
+                "reward": null,
+                "creation_time": 1641216046.2084022,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-139431.pt"
+                ]
+            },
+            {
+                "steps": 499998,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-499998.onnx",
+                "reward": null,
+                "creation_time": 1641219292.9460347,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-499998.pt"
+                ]
+            },
+            {
+                "steps": 999999,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-999999.onnx",
+                "reward": null,
+                "creation_time": 1641223668.9911523,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-999999.pt"
+                ]
+            },
+            {
+                "steps": 1499997,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-1499997.onnx",
+                "reward": null,
+                "creation_time": 1641228013.176633,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-1499997.pt"
+                ]
+            },
+            {
+                "steps": 1999998,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-1999998.onnx",
+                "reward": null,
+                "creation_time": 1641232348.2428927,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-1999998.pt"
+                ]
+            },
+            {
+                "steps": 2499999,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-2499999.onnx",
+                "reward": null,
+                "creation_time": 1641236683.5840356,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-2499999.pt"
+                ]
+            },
+            {
+                "steps": 2999997,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-2999997.onnx",
+                "reward": null,
+                "creation_time": 1641241016.1724021,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-2999997.pt"
+                ]
+            },
+            {
+                "steps": 3334239,
+                "file_path": "results\\Easy\\My Behavior\\My Behavior-3334239.onnx",
+                "reward": null,
+                "creation_time": 1641244077.1494696,
+                "auxillary_file_paths": [
+                    "results\\Easy\\My Behavior\\My Behavior-3334239.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3334239,
+            "file_path": "results\\Easy\\My Behavior.onnx",
+            "reward": null,
+            "creation_time": 1641244077.1494696,
+            "auxillary_file_paths": [
+                "results\\Easy\\My Behavior\\My Behavior-3334239.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.27.0",
+        "torch_version": "1.10.0"
+    }
+}

@@ -9,12 +9,14 @@ public class ObjectDestroyer : MonoBehaviour
     public float lifeTime = 5.0f;
     private GameObject agentObject;
     private ShooterAgent agent;
+    private ShooterAgentRay agentRay;
     private bool despawned = false;
 
     private void OnEnable()
     {
         agentObject = GameObject.FindGameObjectWithTag("Agent");
         agent = agentObject.GetComponent<ShooterAgent>();
+        agentRay = agentObject.GetComponent<ShooterAgentRay>();
         StartCoroutine(GameObjectDestroy());
     }
 
@@ -27,18 +29,43 @@ public class ObjectDestroyer : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (despawned)
+        if (gameObject.transform.position.Equals(agentRay.Location))
+        {
+            agentRay.ClearTarget();
+        }
+        if (despawned && agent != null)
         {
             switch (gameObject.tag)
             {
                 case "Ally":
-                    agent.AddReward(0.5f);
+                    agent.AddReward(1f);
                     break;
                 case "Priorty":
-                    agent.AddReward(-0.4f);
+                    agent.AddReward(-1f);
+                    //agent.AddReward(-0.1f);
                     break;
                 case "Target":
-                    agent.AddReward(-0.4f);
+                    agent.AddReward(-1f);
+                    //agent.AddReward(-0.1f);
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (despawned && agentRay != null)
+        {
+            switch (gameObject.tag)
+            {
+                case "Ally":
+                    agentRay.AddReward(1f);
+                    break;
+                case "Priorty":
+                    agentRay.AddReward(-1f);
+                    //agent.AddReward(-0.1f);
+                    break;
+                case "Target":
+                    agentRay.AddReward(-1f);
+                    //agent.AddReward(-0.1f);
                     break;
                 default:
                     break;

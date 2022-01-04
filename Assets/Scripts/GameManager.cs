@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private TextMeshPro timer;
     public EnvironmentSpawner Environment;
     [SerializeField]
-    public EnvironmentSpawner AgentEnvironment;
+    public EnvironmentSpawnerAgent AgentEnvironment;
     [SerializeField]
     private TextMeshPro scoreBoard;
     [SerializeField]
@@ -18,20 +18,51 @@ public class GameManager : MonoBehaviour
     private GameObject gameOverButton;
     [SerializeField]
     private int awaitTime = 60;
+    [SerializeField]
+    private GameObject easyAgent;
+    [SerializeField]
+    private GameObject normalAgent;
+    [SerializeField]
+    private GameObject hardAgent;
+    [SerializeField]
+    private EnvironmentSpawner spawner;
+    [SerializeField]
+    private EnvironmentSpawnerAgent spawnerAgent;
+
     public enum GameStates
     {
         Playing,
         GameOver
     }
-    public GameStates gameState = GameStates.Playing;
-    // Start is called before the first frame update
+    private GameStates gameState = GameStates.Playing;
+
     void Start()
     {
-        StartCoroutine(GameOver());
         scoreBoard.gameObject.SetActive(true);
         timer.gameObject.SetActive(true);
         gameOverCanvas.gameObject.SetActive(false);
         gameOverButton.gameObject.SetActive(false);
+
+        easyAgent.gameObject.SetActive(false);
+        normalAgent.gameObject.SetActive(false);
+        hardAgent.gameObject.SetActive(false);
+    }
+
+    public void SetDifficulty(int difficulty)
+    {
+        switch (difficulty)
+        {
+            case 1:
+                easyAgent.gameObject.SetActive(true);
+                break;
+            case 2:
+                normalAgent.gameObject.SetActive(true);
+                break;
+            case 3:
+                hardAgent.gameObject.SetActive(true);
+                break;
+        }
+        StartCoroutine(GameOver());
     }
 
     private IEnumerator GameOver()
@@ -39,11 +70,17 @@ public class GameManager : MonoBehaviour
         switch (gameState)
         {
             case GameStates.Playing:
+                spawner.enabled = true;
+                spawnerAgent.enabled = true;
+                spawner.ClearEnvironment();
+                spawner.StartEnvironment();
+
                 for (int i = awaitTime; i > -1; i--)
                 {
                     yield return new WaitForSeconds(1);
                     timer.text = i.ToString();
                 }
+
                 Debug.Log("einde spel");
                 scoreBoard.gameObject.SetActive(false);
                 timer.gameObject.SetActive(false);

@@ -20,7 +20,6 @@ public class ShooterPlayer : MonoBehaviour
     private float timer = 5f;
     private bool shoot = false;
     private float score = 0;
-    private EnvironmentSpawner environment;
     [SerializeField]
     private PrimaryButtonWatcher watcher;
     public bool isPressed = false;
@@ -28,9 +27,6 @@ public class ShooterPlayer : MonoBehaviour
 
     void Start()
     {
-        environment = GetComponentInParent<EnvironmentSpawner>();
-        environment.ClearEnvironment();
-        environment.StartEnvironment();
         transform.localPosition = new Vector3(0, 0, 0);
 
         watcher.primaryButtonDown.AddListener(onPrimaryButtonEvent);

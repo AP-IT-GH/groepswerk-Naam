@@ -18,15 +18,16 @@ public class ShooterAgent : Agent
     private float timer = 5f;
     private bool shoot = false;
     public int agentScore;
-    private EnvironmentSpawner environment;
+    private EnvironmentSpawnerAgent environment;
 
     void Start()
     {
-        environment = GetComponentInParent<EnvironmentSpawner>();  
+        environment = GetComponentInParent<EnvironmentSpawnerAgent>();  
     }
 
     void Update()
     {
+        //score.text = GetCumulativeReward().ToString("f6");
         score.text = agentScore.ToString();
     }
 
@@ -42,17 +43,18 @@ public class ShooterAgent : Agent
         var action = actions.DiscreteActions;
         if (action[0] == 1)
         {
-            AddReward(0.00001f);
+            AddReward(0.000001f);
             TurnLeft();
         }
         else if (action[0] == 2)
         {
-            AddReward(0.00001f);
+            AddReward(0.000001f);
             TurnRight();
         } 
         else if (action[0] == 3)
         {
-            AddReward(-0.01f);
+            //AddReward(-0.05f);
+            AddReward(-0.000001f);
             Shoot();
         }
     }
@@ -73,7 +75,7 @@ public class ShooterAgent : Agent
     {
         if (timer > fireRate)
         {
-            GameObject newBullet = Instantiate(bullet, new Vector3(0, 1, 0) + transform.forward, transform.rotation);
+            GameObject newBullet = Instantiate(bullet, new Vector3(-180, 1, 0) + transform.forward, transform.rotation);
             newBullet.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed, ForceMode.VelocityChange);
             shoot = true;
             timer = 0f;
