@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     private TextMeshPro timer;
-    public EnvironmentSpawner Environment;
     [SerializeField]
     public EnvironmentSpawnerAgent AgentEnvironment;
     [SerializeField]
@@ -83,6 +82,8 @@ public class GameManager : MonoBehaviour
                 spawnerAgent.enabled = true;
                 spawner.ClearEnvironment();
                 spawner.StartEnvironment();
+                AgentEnvironment.StartEnvironment();
+
 
                 for (int i = awaitTime; i > -1; i--)
                 {
@@ -95,9 +96,11 @@ public class GameManager : MonoBehaviour
                 timer.gameObject.SetActive(false);
                 gameOverCanvas.gameObject.SetActive(true);
                 gameOverCanvas.text = "End " + scoreBoard.text;
-                Environment.ClearEnvironment();
+                spawner.ClearEnvironment();
                 AgentEnvironment.ClearEnvironment();
                 gameOverButton.gameObject.SetActive(true);
+                
+       
                 gameState = GameStates.GameOver;
                 break;
         }

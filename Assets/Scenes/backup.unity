@@ -4492,7 +4492,7 @@ MonoBehaviour:
   scoreBoard: {fileID: 1484466540}
   gameOverCanvas: {fileID: 495615346}
   gameOverButton: {fileID: 1709832991}
-  awaitTime: 60
+  awaitTime: 20
   easyAgent: {fileID: 1619106947}
   normalAgent: {fileID: 953491573}
   hardAgent: {fileID: 694081672}
