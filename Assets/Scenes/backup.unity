@@ -841,8 +841,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 786.03973, y: 1, z: 1}
-  m_Center: {x: -392.52, y: 0, z: 0}
+  m_Size: {x: 574.10333, y: 1, z: 1.0813143}
+  m_Center: {x: -286.5518, y: 0, z: -0.040657844}
 --- !u!23 &668964219
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2853,7 +2853,7 @@ PrefabInstance:
       objectReference: {fileID: 1518332179}
     - target: {fileID: 2611232297223851191, guid: b212a9ef12c0ef847b469b312d613212, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2611232297223851191, guid: b212a9ef12c0ef847b469b312d613212, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2906,7 +2906,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1914973057968782972, guid: a17722bc48d86214ea5cac2a82eef013, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1914973057968782972, guid: a17722bc48d86214ea5cac2a82eef013, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3028,7 +3028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7729228241354129783, guid: f6138a1e6e9d11d4fbfe5f397f469738, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7729228241354129783, guid: f6138a1e6e9d11d4fbfe5f397f469738, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4487,12 +4487,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 258204879}
-  Environment: {fileID: 1443772462}
   AgentEnvironment: {fileID: 1802398073}
   scoreBoard: {fileID: 1484466540}
   gameOverCanvas: {fileID: 495615346}
   gameOverButton: {fileID: 1709832991}
-  awaitTime: 20
+  awaitTime: 60
   easyAgent: {fileID: 1619106947}
   normalAgent: {fileID: 953491573}
   hardAgent: {fileID: 694081672}
