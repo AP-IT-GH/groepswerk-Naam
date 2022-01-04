@@ -28,6 +28,12 @@ public class GameManager : MonoBehaviour
     private EnvironmentSpawner spawner;
     [SerializeField]
     private EnvironmentSpawnerAgent spawnerAgent;
+    [SerializeField]
+    private GameObject easyButton;
+    [SerializeField]
+    private GameObject normalButton;
+    [SerializeField]
+    private GameObject hardButton;
 
     public enum GameStates
     {
@@ -62,6 +68,9 @@ public class GameManager : MonoBehaviour
                 hardAgent.gameObject.SetActive(true);
                 break;
         }
+        easyButton.gameObject.SetActive(false);
+        normalButton.gameObject.SetActive(false);
+        hardButton.gameObject.SetActive(false);
         StartCoroutine(GameOver());
     }
 

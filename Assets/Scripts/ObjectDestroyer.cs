@@ -29,9 +29,12 @@ public class ObjectDestroyer : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (gameObject.transform.position.Equals(agentRay.Location))
+        if (agentRay != null)
         {
-            agentRay.ClearTarget();
+            if (gameObject.transform.position.Equals(agentRay.Location))
+            {
+                agentRay.ClearTarget();
+            }
         }
         if (despawned && agent != null)
         {

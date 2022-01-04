@@ -8,7 +8,7 @@ public class WallCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall" || collision.gameObject.tag == "Bullet" && gameObject.tag == "Wall")
         {
             Destroy(collision.gameObject);
         }

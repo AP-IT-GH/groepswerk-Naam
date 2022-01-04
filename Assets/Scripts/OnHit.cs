@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class OnHit : MonoBehaviour
 {
     private GameObject agentObject;
+    private GameObject playerObject;
     private ShooterAgent agent;
     private ShooterPlayer player;
     private ShooterAgentRay agentRay;
@@ -13,8 +14,10 @@ public class OnHit : MonoBehaviour
     private void Start()
     {
         agentObject = GameObject.FindGameObjectWithTag("Agent");
+        playerObject = GameObject.FindGameObjectWithTag("Player");
         agent = agentObject.GetComponent<ShooterAgent>();
         agentRay = agentObject.GetComponent<ShooterAgentRay>();
+        player = playerObject.GetComponent<ShooterPlayer>();
     }
 
     private void OnCollisionEnter(Collision collision)
