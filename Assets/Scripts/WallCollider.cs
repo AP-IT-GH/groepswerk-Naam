@@ -8,10 +8,9 @@ public class WallCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "GameOver")
+        if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall")
         {
             Destroy(collision.gameObject);
-            SceneManager.LoadScene("backup");
         }
     }
 }

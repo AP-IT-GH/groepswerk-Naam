@@ -15,6 +15,9 @@ TagManager:
   - BulletPlayer
   - Wall
   - GameOver
+  - Easy
+  - Normal
+  - Hard
   layers:
   - Default
   - TransparentFX

@@ -146,6 +146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 6408874311550241873, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
+      propertyPath: m_TagString
+      value: Normal
+      objectReference: {fileID: 0}
     - target: {fileID: 7430167665344918131, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
       propertyPath: gameManager
       value: 
@@ -617,6 +621,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6408874311550241873, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
       propertyPath: m_Name
+      value: Hard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408874311550241873, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
+      propertyPath: m_TagString
       value: Hard
       objectReference: {fileID: 0}
     - target: {fileID: 7430167665344918131, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
@@ -2394,6 +2402,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6408874311550241873, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
       propertyPath: m_Name
+      value: Easy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408874311550241873, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}
+      propertyPath: m_TagString
       value: Easy
       objectReference: {fileID: 0}
     - target: {fileID: 7430167665344918131, guid: 7e919935187c5cd4caad47c1bdd6363f, type: 3}

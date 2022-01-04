@@ -52,9 +52,10 @@ public class OnHit : MonoBehaviour
             player.AddReward(-2f);
             DestroyObject(collision, gameObject);
         }
-        else if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "Wall")
+        else if (collision.gameObject.tag == "BulletPlayer" && gameObject.tag == "GameOver")
         {
             Destroy(collision.gameObject);
+            SceneManager.LoadScene("backup");
         }
     }
 
