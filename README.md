@@ -491,7 +491,7 @@ Er worden voor de agent 2 scores bij gehouden, deze zijn de beloningen voor de a
     }
 ```
 
-* Speler: De speler werkt enkel met een RightHandController waarin de XR-componenten staan, verder is er een camera en een scherm waarin de camera van de agent te zien is. De schiet methode van de speler is hetzelfde als die van de agents, enkel de *AddReward(float reward)* methode voegt de score toe aan een variabele zodat we deze kunnen bijhouden en maken we gebruik van een **UnityEvent** en **EventWatcher** dit gebeurt in *PrimaryButtonWatcher.cs*. Dit werd gemaakt met behulp van de bron in [Bronvermelding](#bronvermelding (APA 7th edition))
+* Speler: De speler werkt enkel met een RightHandController waarin de XR-componenten staan, verder is er een camera en een scherm waarin de camera van de agent te zien is. De schiet methode van de speler is hetzelfde als die van de agents, enkel de *AddReward(float reward)* methode voegt de score toe aan een variabele zodat we deze kunnen bijhouden en maken we gebruik van een **UnityEvent** en **EventWatcher** dit gebeurt in *PrimaryButtonWatcher.cs*. Dit werd gemaakt met behulp van de bron in [bronvermelding](#bronvermelding)
 
 *PrimaryButtonWatcher.cs - PrimaryButtonEvent*: hierin maken we het event aan, aangezien dit over de primary button ("a" op de controller) gaat kan deze true of false zijn -> bool.
 ```{r}
@@ -625,6 +625,7 @@ We hadden toch door na dat we begonnen waren dat de training meer moeite ging ko
 
 In de toekomst zullen we misschien de taken van de agent opsplitsen zodat de agent alle taken in kleine hapjes kan leren en niet alles tegelijkertijd, dit zal ons tijd besparen bij de trainingen. We hadden ook problemen bij de input van de Oculus te lezen en na veel tijd hebben we toch een complexe oplossing gevonden dus deze kunnen we ook toepassen bij toekomstige projecten.
 
-## Bronvermelding (APA 7th edition)
+## Bronvermelding
+***using: APA 7th edition***
 Unity Technologies. (2021, December 23). *Unity - Manual: Unity XR Input.* Unity3d.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieved January 1, 2022, from https://docs.unity3d.com/Manual/xr_input.html
