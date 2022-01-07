@@ -563,7 +563,7 @@ public class PrimaryButtonWatcher : MonoBehaviour
 
 #### One-pager
 * Afwijkingen: De enige afwijking is dat de muur waardoor de speler de agent kan zien niet rechts van de speler staat maar links. Verder zijn de moeilijkheidsgraden vooral op snelheid gericht, in *easy* zal de agent bondgenoten raken en soms vast lopen op een target totdat deze verdwijnt. In *normal* zal de agent minder vaak bondgenoten raken en accurater schieten, in *hard* gaat de agent abnormaal snel en heeft deze een erg lage kans om bondgenoten te raken, ongeveer 9% (1/11) kans wanneer een bondgenoot in zicht is. Tenslotte krijgen de speler en agent geen bonuspunten voor hoofschoten (dit was een mogelijke uitbereiding in de one-pager).
-De one-pager zelf vindt je terug in [here](./One-Pager)
+De one-pager zelf vindt je terug [hier](./One-Pager.pdf)
 
 ## Resultaten
 
