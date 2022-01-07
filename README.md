@@ -381,6 +381,54 @@ Er worden voor de agent 2 scores bij gehouden, deze zijn de beloningen voor de a
     }
 ```
 
+*OnActionReceived(ActionBuffers actions) - Easy, Normal Agent*: Wanneer de agent een actie kiest geven we hier ook een minimale beloning, zodat de agent weet dat hij dit (niet) vaker mag doen. 
+```{r}
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+        var action = actions.DiscreteActions;
+        if (action[0] == 1)
+        {
+            AddReward(0.000001f);
+            TurnLeft();
+        }
+        else if (action[0] == 2)
+        {
+            AddReward(0.000001f);
+            TurnRight();
+        } 
+        else if (action[0] == 3)
+        {
+            //AddReward(-0.05f);
+            AddReward(-0.000001f);
+            Shoot();
+        }
+    }
+```
+
+*OnActionReceived(ActionBuffers actions) - Hard Agent*: De hard agent wordt zwaarder gestraft bij het maken van acties.
+```{r}
+    public override void OnActionReceived(ActionBuffers actions)
+    {
+
+        var action = actions.DiscreteActions;
+        if (action[0] == 1)
+        {
+            AddReward(-0.001f);
+            FindTarget();
+        }
+        else if (action[0] == 2)
+        {
+            AddReward(-0.0001f);
+            ClearTarget();
+        }
+        else if (action[0] == 3)
+        {
+            AddReward(-0.05f);
+            Shoot();
+        }
+    }
+```
+
 #### Objecten
 * Doelwitten: Hoe de doelwitten tevoorschijn komen werd uitgelegd in [Spelverloop](#spelverloop), de beloningen van de doelwitten werdt uitgelegd in [Beloningen](#beloningen). Een doelwit wordt ook vernieitigt nadat deze is geraakt, of na een bepaalde timer. De timer voor een normaal doelwit is 8seconden, bondgenoot is ook 8seconden en een prioritair doelwit is 10s. Nadat deze timer afloopt wordt het via *ObjectDestroyer.cs* vernietigt. Bij de prefab van een prioritair target is er ook een sound toegewezen zodat de speler kan horen wanneer deze tevoorschijn komt en ook waar met behulp van spatial blend en logarithmic rolloff.
 
