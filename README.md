@@ -624,3 +624,7 @@ We hebben drie verschillende moeilijkheidsgraden getrained, 'easy', 'normal' en 
 We hadden toch door na dat we begonnen waren dat de training meer moeite ging kosten dan gedacht want we moesten de agent eerst apart kunnen laten schieten en daarna voegde we telkens acties toe. Na het schieten voegde we verschillende targets toe zodat de agent wist op welk target hij wel moest schieten en welk target niet en hierna voegde we ook toe dat de agent kon draaien en de target kon zoeken. Dit was niet allemaal even evident dus hebben we de agent de eerste paar stappen met heuristic aangeleerd.
 
 In de toekomst zullen we misschien de taken van de agent opsplitsen zodat de agent alle taken in kleine hapjes kan leren en niet alles tegelijkertijd, dit zal ons tijd besparen bij de trainingen. We hadden ook problemen bij de input van de Oculus te lezen en na veel tijd hebben we toch een complexe oplossing gevonden dus deze kunnen we ook toepassen bij toekomstige projecten.
+
+## Bronvermelding (APA 7th edition)
+Unity Technologies. (2021, December 23). *Unity - Manual: Unity XR Input.* Unity3d.
+    Retrieved January 1, 2022, from https://docs.unity3d.com/Manual/xr_input.html
