@@ -491,7 +491,7 @@ Er worden voor de agent 2 scores bij gehouden, deze zijn de beloningen voor de a
     }
 ```
 
-* Speler: De speler werkt enkel met een RightHandController waarin de XR-componenten staan, verder is er een camera en een scherm waarin de camera van de agent te zien is. De schiet methode van de speler is hetzelfde als die van de agents, enkel de *AddReward(float reward)* methode voegt de score toe aan een variabele zodat we deze kunnen bijhouden en maken we gebruik van een **UnityEvent** en **EventWatcher** dit gebeurt in *PrimaryButtonWatcher.cs*
+* Speler: De speler werkt enkel met een RightHandController waarin de XR-componenten staan, verder is er een camera en een scherm waarin de camera van de agent te zien is. De schiet methode van de speler is hetzelfde als die van de agents, enkel de *AddReward(float reward)* methode voegt de score toe aan een variabele zodat we deze kunnen bijhouden en maken we gebruik van een **UnityEvent** en **EventWatcher** dit gebeurt in *PrimaryButtonWatcher.cs*. Dit werd gemaakt met behulp van de bron in [Bronvermelding](#bronvermelding)
 
 *PrimaryButtonWatcher.cs - PrimaryButtonEvent*: hierin maken we het event aan, aangezien dit over de primary button ("a" op de controller) gaat kan deze true of false zijn -> bool.
 ```{r}
