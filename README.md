@@ -285,7 +285,7 @@ Deze agents kunnen links en rechts roteren alsook schieten. De methoden werken a
 ```
 
 #### Hard-agent
-Het schieten blijft hetzelfde maar deze agent draait niet om rond zicht te kijken maar gebruikt de perception-sensors. De *FindTarget()* methode kijkt of er een ray is die een tagged object heeft geraakt (Ally, Priority of Target), zo ja kijkt of het object nog bestaat of niet. Indien deze voorwaarde voldaan zijn zal de locatie van dit object gebruikt worden en kijkt de agent naar deze positie. Ook kan de agent zijn target clearen met *ClearTarget()* dit betekent dat hij een nieuwe target kan zoeken met *FindTarget()*.
+Het schieten blijft hetzelfde maar deze agent draait niet om rond zich te kijken maar gebruikt de perception-sensors. De *FindTarget()* methode kijkt of er een ray is die een tagged object heeft geraakt (Ally, Priority of Target), zo ja kijkt of het object nog bestaat of niet. Indien deze voorwaarde voldaan zijn zal de locatie van dit object gebruikt worden en kijkt de agent naar deze positie. Ook kan de agent zijn target clearen met *ClearTarget()* dit betekent dat hij een nieuwe target kan zoeken met *FindTarget()*.
 
 * ShooterAgentRay.cs
 
