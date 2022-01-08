@@ -38,6 +38,15 @@ In de READ.ME file zal de lezer te weten komen wat je allemaal kunt doen in deze
 | PyTorch | 1.10.0 |
 | Unity | 2020.3.24f1 |
 
+#### Assets
+| Asset | Source |
+| :------: | :-----: |
+| Gun-model | [Asset Store](https://assetstore.unity.com/packages/3d/props/guns/modern-guns-handgun-129821) |
+| Target-models | [Asset Store](https://assetstore.unity.com/packages/3d/characters/bag-face-pack-40222) |
+| Skybox | [Asset Store](https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633) |
+
+---
+
 ### Spelverloop
 
 Het spel start op, de gebruiker heeft een geweer in zijn rechterhand en 3 knoppen voor zich. De 3 knoppen dienen om de moeilijkheidsgraad te bepalen van het spel, de keuzes zijn respectievelijk: makkelijk (easy), normaal (normal) en moeilijk (hard). Het spel zal even laden en daarna begint het, je hebt 60 seconden de tijd om doelwitten te raken (rode kleding), elk doelwit is 1 punt waard. Wanneer je een bondgenoot (groende kleding) raakt verlies je 2 punten en wanneer je een prioriteit-doelwit raakt (blauwe kleding), verdien je 3 punten. Boven je is er een scherm waardoor de camera van de agent zichtbaar is, zo kan je ook de agent zijn score bekijken en deze vergelijken met je eigen scoren in de rechter-bovenkant van je scherm. Je kan de agent ook zien als je naar de linkerzijde van de arena kijkt. Door de ondergrond en muur tussen agent en speler kan niet geschoten worden. Na deze 60 seconden is er een knop recht boven je waarmee je het spel opnieuw kan laten starten en een nieuwe moeilijkheidsgraad kan kiezen. Deze acties worden met behulp van een GameManager script gedaan.
@@ -237,6 +246,8 @@ private void OnEnable()
     }
 ```
 
+---
+
 #### Observaties
 
 Alle agents werken met ray perception sensors.
@@ -246,6 +257,8 @@ Alle agents werken met ray perception sensors.
 - Normal-agent: De Normal-agent heeft 10 ray perception sensors verdeeld over 360 graden zonder een sphere cast radius (om een acurater mikpunt te verkrijgen), deze hebben een lengte van 70 waardoor heel de arena zichtbaar is. Verder is er een verticale start en eind offset toegepast op de hoogt van y=2 zodat deze enkel de hoofden van de targets kan zien. De normale-agent ziet enkel de objecten met de tags: Target, Ally en Priority.
 
 - Hard-agent: Deze agent wouden we eerst met een camera-sensor laten werken maar achteraf zijn we toch bij de ray perception sensor gebleven. De reden hiervoor is dat we ervoor zorgen dat de agent een target kan zoeken en hier direct naar kan kijken wanneer een ray deze raakt. Hierdoor moet de agent niet meer ronddraaien om een naar een doelwit te mikken. Zoals de normale-agent kan deze enkel objecten met de tags: Target, Ally en Priority zien. De rays hebben een lengte van 70 en er zijn 50 rays over 360 graden. Deze hebben een sphere cast radius van 1 en zijn ook in een offset van y=2.
+
+---
 
 #### Acties
 
@@ -341,6 +354,8 @@ _ClearTarget()_
         }
     }
 ```
+
+---
 
 #### Beloningen
 
@@ -456,6 +471,8 @@ _OnActionReceived(ActionBuffers actions) - Hard Agent_: De hard agent wordt zwaa
         }
     }
 ```
+
+---
 
 #### Objecten
 
@@ -646,10 +663,14 @@ _ShooterPlayer.cs - Shoot when primary button pressed_
     }
 ```
 
+---
+
 #### One-pager
 
 - Afwijkingen: De enige afwijking is dat de muur waardoor de speler de agent kan zien niet rechts van de speler staat maar links. Verder zijn de moeilijkheidsgraden vooral op snelheid gericht, in _easy_ zal de agent bondgenoten raken en soms vast lopen op een target totdat deze verdwijnt. In _normal_ zal de agent minder vaak bondgenoten raken en accurater schieten, in _hard_ gaat de agent abnormaal snel en heeft deze een erg lage kans om bondgenoten te raken, ongeveer 9% (1/11) kans wanneer een bondgenoot in zicht is. Tenslotte krijgen de speler en agent geen bonuspunten voor hoofschoten (dit was een mogelijke uitbereiding in de one-pager).
   De one-pager zelf vindt je terug [hier](./One-Pager.pdf)
+
+---
 
 ## Resultaten
 
@@ -698,8 +719,13 @@ We hadden toch door na dat we begonnen waren dat de training meer moeite ging ko
 
 In de toekomst zullen we misschien de taken van de agent opsplitsen zodat de agent alle taken in kleine hapjes kan leren en niet alles tegelijkertijd, dit zal ons tijd besparen bij de trainingen. We hadden ook problemen bij de input van de Oculus te lezen en na veel tijd hebben we toch een complexe oplossing gevonden dus deze kunnen we ook toepassen bij toekomstige projecten. We hebben ook gezien da we bij complexe acties eerst beter de agent zelf de basis aanleren a.d.h.v. heuristic om zo dan de training te versnellen.
 
+---
+
 ## Bronvermelding
 
 **_using: APA 7th edition_**  
 Unity Technologies. (2021, December 23). _Unity - Manual: Unity XR Input._ Unity3d.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieved January 1, 2022, from https://docs.unity3d.com/Manual/xr_input.html
+
+---
+
