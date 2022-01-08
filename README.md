@@ -679,7 +679,7 @@ Normal:
 ![LearningRateNormal.png](./TensorboardImages/LearningRateNormal.PNG) ![ExtrinsicValueEstimateNormal.png](./TensorboardImages/ExtrinsicValueEstimateNormal.PNG)
 
 Hard:  
-![BetaHard.png](./TensorboardImages/BetaHard.png) ![EntropyHard.png](./TensorboardImages/EntropyHard.PNG)  
+![BetaHard.png](./TensorboardImages/BetaHard.PNG) ![EntropyHard.png](./TensorboardImages/EntropyHard.PNG)  
 ![LearningRateHard.png](./TensorboardImages/LearningRateHard.PNG) ![ExtrinsicValueEstimateHard.png](./TensorboardImages/ExtrinsicValueEstimateHard.PNG)
 
 **Verwachting**: Beta daalt lineair en Entropy daalt gelijdelijk aan naar het einde van de training toe. Dit moeten we ook terug zien in de Learning Rate die lineair vermindert. De Extrinsic Value Estimate stijgt gelijdelijk aan naarmate de agent stopt met nieuwe keuzes te onderzoeken.  
