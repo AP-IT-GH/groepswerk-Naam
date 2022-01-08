@@ -658,29 +658,29 @@ Bij de 'hard' moeilijkheidsgraad slaagde de agent er wel in zichzelf alles aan t
 
 We bekijken de moeilijkheidsgraden 'easy' in lichtoranje, 'normal' in donkerrood en 'hard' in blauw. Een belangrijk verschil tussen de drie is de lengte van de training. De 'easy' training heeft 8 uur en 14 minuten gelopen, de 'medium' training 1 uur en 38 minuten en de 'hard' training maar 1 uur en 20 minuten.  
 Easy:  
-![PolicyLossEasy.png](./TensorboardImages/PolicyLossEasy.png)  
-![ValueLossEasy.png](./TensorboardImages/ValueLossEasy.png)  
+![PolicyLossEasy.png](./TensorboardImages/PolicyLossEasy.PNG)  
+![ValueLossEasy.png](./TensorboardImages/ValueLossEasy.PNG)  
 Normal:  
-![PolicyLossNormal.png](./TensorboardImages/PolicyLossNormal.png)  
-![ValueLossNormal.png](./TensorboardImages/ValueLossNormal.png)  
+![PolicyLossNormal.png](./TensorboardImages/PolicyLossNormal.PNG)  
+![ValueLossNormal.png](./TensorboardImages/ValueLossNormal.PNG)  
 Hard:  
-![PolicyLossHard.png](./TensorboardImages/PolicyLossHard.png)  
-![ValueLossHard.png](./TensorboardImages/ValueLossHard.png)
+![PolicyLossHard.png](./TensorboardImages/PolicyLossHard.PNG)  
+![ValueLossHard.png](./TensorboardImages/ValueLossHard.PNG)
 
 **Verwachting**: Naarmate de agent meer en meer getrained wordt daalt de policy loss en benadert de value loss de waarde 0.  
 **Conclusie**: De agent slaagt er bij 'easy' en 'normal' niet in correct in zijn scores correct in te schatten en de training stabiliseert niet. Policy loss blijft rond een waarde van 0.13 hangen en value loss rond een waarde van 13. Ook opvallend is dat een verschil van zes en een half uur in trainingsduur weinig invloed heeft op het resultaat. De grafiek toont aan dat de training niet succesvol loopt maar toch zien we dat de agent steeds betere scores behaalt.  
 Bij 'hard' zien we dat wederom de policy loss rond een waarde van 0.13 blijft hangen maar deze keer daalt de value loss zoals verwacht aanzienlijk. Dit zien we ook terug in het feit dat deze training vanzelf alles succesvol aanleerde.
 
 Easy:  
-![BetaEasy.png](./TensorboardImages/BetaEasy.png) ![EntropyEasy.png](./TensorboardImages/EntropyEasy.png)  
-![LearningRateEasy.png](./TensorboardImages/LearningRateEasy.png) ![ExtrinsicValueEstimateEasy.png](./TensorboardImages/ExtrinsicValueEstimateEasy.png)  
+![BetaEasy.png](./TensorboardImages/BetaEasy.PNG) ![EntropyEasy.png](./TensorboardImages/EntropyEasy.PNG)  
+![LearningRateEasy.png](./TensorboardImages/LearningRateEasy.PNG) ![ExtrinsicValueEstimateEasy.png](./TensorboardImages/ExtrinsicValueEstimateEasy.PNG)  
 Normal:  
-![BetaNormal.png](./TensorboardImages/BetaNormal.png) ![EntropyNormal.png](./TensorboardImages/EntropyNormal.png)  
-![LearningRateNormal.png](./TensorboardImages/LearningRateNormal.png) ![ExtrinsicValueEstimateNormal.png](./TensorboardImages/ExtrinsicValueEstimateNormal.png)
+![BetaNormal.png](./TensorboardImages/BetaNormal.PNG) ![EntropyNormal.png](./TensorboardImages/EntropyNormal.PNG)  
+![LearningRateNormal.png](./TensorboardImages/LearningRateNormal.PNG) ![ExtrinsicValueEstimateNormal.png](./TensorboardImages/ExtrinsicValueEstimateNormal.PNG)
 
 Hard:  
-![BetaHard.png](./TensorboardImages/BetaHard.png) ![EntropyHard.png](./TensorboardImages/EntropyHard.png)  
-![LearningRateHard.png](./TensorboardImages/LearningRateHard.png) ![ExtrinsicValueEstimateHard.png](./TensorboardImages/ExtrinsicValueEstimateHard.png)
+![BetaHard.png](./TensorboardImages/BetaHard.png) ![EntropyHard.png](./TensorboardImages/EntropyHard.PNG)  
+![LearningRateHard.png](./TensorboardImages/LearningRateHard.PNG) ![ExtrinsicValueEstimateHard.png](./TensorboardImages/ExtrinsicValueEstimateHard.PNG)
 
 **Verwachting**: Beta daalt lineair en Entropy daalt gelijdelijk aan naar het einde van de training toe. Dit moeten we ook terug zien in de Learning Rate die lineair vermindert. De Extrinsic Value Estimate stijgt gelijdelijk aan naarmate de agent stopt met nieuwe keuzes te onderzoeken.  
 **Conclusie**: Bij alle drie de moeilijkheidsgraden zien we de verwachtte lineaire daling van Beta die we ook terugzien in de Learning Rate. Ook zien we dat de Extrinsic Value Estimate inderdaad geleidelijk aan stijgt. Dit toont aan dat de agent correct bijleert om per honderd steps de acties te kiezen die zijn waarden verhogen. Wel opmerkelijk is dat enkel de 'hard' agent de verwachtte geleidelijke daling van Entropy toont. Dit toont aan dat de 'easy' en 'normal' agents veel eerder ophielden met nieuwe keuzes te onderzoeken. Dit heeft te maken met het feit dat deze twee verder trainden op een brein dat al meerdere acties aangeleerd was.
