@@ -11,29 +11,32 @@ In de READ.ME file zal de lezer te weten komen wat je allemaal kunt doen in deze
 ### Installatie
 
 #### Unity
-
-- Cinemachine - 2.6.11
-- Input System - 1.2.0
-- JetBrains Rider Editor - 2.0.7
-- ML Agents - 2.0.0
-- Oculus XR Plugin - 1.11.2
-- OpenXR Plugin - 1.2.8
-- Test Framework - 1.1.29
-- TextMeshPro - 3.0.6
-- Timeline - 1.4.8
-- Unity UI - 1.0.0
-- Universal RP - 10.7.0
-- Version Control - 1.15.4
-- Visual Studio Code Editor - 1.2.4
-- Visual Studio Editor - 2.0.12
-- XR Interaction Toolkit - 1.0.0-pre.3
-- CR Plugin Management - 4.2.0
+| Package | Version |
+| :-----: | :-----: |
+| Cinemachine | 2.6.11 |
+| Input System | 1.2.0 |
+| JetBrains Rider Editor | 2.0.7 |
+| ML Agents | 2.0.0 |
+| Oculus XR Plugin | 1.11.2 |
+| OpenXR Plugin | 1.2.8 |
+| Test Framework | 1.1.29 |
+| TextMeshPro | 3.0.6 |
+| Timeline | 1.4.8 |
+| Unity UI | 1.0.0 |
+| Universal RP | 10.7.0 |
+| Version Control | 1.15.4 |
+| Visual Studio Code Editor | 1.2.4 |
+| Visual Studio Editor | 2.0.12 |
+| XR Interaction Toolkit | 1.0.0-pre.3 |
+| CR Plugin Management | 4.2.0 |
 
 #### Extern
-
-- Anaconda 3
-- Ml-agents: 0.27.0 (Release 18)
-- PyTorch: 1.10.0
+| Software | Version |
+| :------: | :-----: |
+| Anaconda | 3 |
+| Ml-agents | 0.27.0 (Release 18) |
+| PyTorch | 1.10.0 |
+| Unity | 2020.3.24f1 |
 
 ### Spelverloop
 
